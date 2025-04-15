@@ -104,6 +104,77 @@ El proyecto sigue la arquitectura **Modelo-Vista-Controlador (MVC)**:
    git clone https://github.com/Encina33/Entrega25.git
 
 
+
+
+
+
+
+
+
+# Proyecto: Juegos Clásicos de Programación
+
+Este proyecto implementa tres problemas clásicos de programación utilizando una arquitectura **Modelo-Vista-Controlador (MVC)**. Los juegos disponibles son:
+
+1. **Torres de Hanói**
+2. **Problema de las 8 Reinas**
+3. **Problema del Caballo de Ajedrez**
+
+---
+
+## **Estructura del Programa**
+
+El programa sigue el patrón **Modelo-Vista-Controlador (MVC)**:
+- **Modelo**: Contiene la lógica de los juegos (`TowersOfHanoi`, `EightQueens`, `KnightTour`).
+- **Vista**: En este caso, la salida se muestra en la consola.
+- **Controlador**: La clase `GameController` gestiona la interacción entre el usuario y los juegos.
+
+---
+
+## **Flujo del Programa**
+
+1. **Inicio**:
+   - El programa comienza en la clase `Main`, que llama al método `start()` del `GameController`.
+
+2. **Menú**:
+   - El controlador muestra un menú en la consola con las opciones de los juegos:
+     ```
+     Selecciona un juego:
+     1. Torres de Hanói
+     2. Problema de las 8 Reinas
+     3. Problema del Caballo de Ajedrez
+     ```
+
+3. **Selección del Juego**:
+   - Según la elección del usuario, el controlador crea una instancia del juego correspondiente.
+
+4. **Ejecución del Juego**:
+   - El método `play()` del juego seleccionado ejecuta la lógica específica y muestra los resultados en la consola.
+
+---
+
+## **Explicación de las Clases**
+
+### **1. Clase `GameController`**
+La clase `GameController` es el controlador del programa. Su función principal es gestionar la interacción entre el usuario y los juegos. 
+
+#### **Método `start()`**
+- **Mostrar el Menú**: Muestra las opciones de los juegos disponibles.
+- **Leer la Elección del Usuario**: Utiliza un objeto `Scanner` para leer la entrada del usuario desde la consola.
+- **Seleccionar el Juego**: Usa un `switch` para determinar qué juego ejecutar según la elección del usuario.
+- **Ejecutar el Juego**: Llama al método `play()` del juego seleccionado, que contiene la lógica específica de cada juego.
+
+### **2. Clase `GameObject`**
+- Es una clase abstracta que define el método `play()`:
+  ```java
+  public abstract class GameObject {
+      public abstract void play();
+  }
+
+
+
+   
+
+
 Entrega25/
 ├── src/
 
@@ -138,6 +209,8 @@ Entrega25/
 │   │   └── KnightTourController.java
 
 │   └── Main.java
+
+
 
 
 
